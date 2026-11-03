@@ -1,0 +1,14 @@
+# 签名密钥（build.sh 中密码为明文，切勿上传到公开仓库）
+resign/
+
+# 构建产物（aapt2/javac/d8/zipalign/apksigner 生成）
+build/
+
+# 系统 / 临时文件
+.DS_Store
+**/.DS_Store
+
+# APK v3 签名块文件（构建产物）
+*.idsig
+
+# 注：项目发布的安装包 xiaorizi-1.0.apk 需要保留，不在此忽略。

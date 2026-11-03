@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">小日子</string>
+    <string name="channel_birthday">生日提醒</string>
+    <string name="channel_anniversary">纪念日提醒</string>
+    <string name="channel_desc">生日和纪念日的当天提醒</string>
+    <string name="widget_desc">在桌面查看最近的重要日子</string>
+</resources>

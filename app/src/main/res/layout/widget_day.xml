@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 小组件：底层是背景图（封面照片或渐变），上面叠内容 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/w_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景层：封面照片 / 渐变，由代码按实际尺寸绘制成圆角位图 -->
+    <ImageView
+        android:id="@+id/w_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/widget_desc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top">
+
+            <TextView
+                android:id="@+id/w_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❤️"
+                android:textSize="13sp"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/w_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:text="我们在一起"
+                android:textSize="12.5sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/w_date"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 大数字 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/w_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1247"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:maxLines="1"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/w_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="6dp"
+                android:text="天"
+                android:textSize="11sp"
+                android:textColor="#D9FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/w_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="2023年5月20日 起"
+            android:textSize="10.5sp"
+            android:textColor="#D9FFFFFF"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- 弹性留白：把下面的“即将到来”推到卡片底部 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/w_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="#33FFFFFF" />
+
+        <TextView
+            android:id="@+id/w_row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎂 妈妈生日 · 还有 20 天"
+            android:textSize="11sp"
+            android:textColor="#E6FFFFFF"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/w_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="❤️ 在一起 · 第 1247 天"
+            android:textSize="11sp"
+            android:textColor="#E6FFFFFF"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+</FrameLayout>
